@@ -4,7 +4,6 @@
   },
   "dialect": "sqlite",
   "cookie_hash": "yCqSPGz6b88csm0oYWGN/9JTZLB4WcAbebY+ZMJ/+Sg=",
-  "cookie_encryption": "/RjA8/DcqdTfiwJFENg4LSU2fyJRZUVWSVDqxp854cY=",
   "password_login_disable": true,
   "non_admin_can_create_project": true,
   "oidc_providers": {

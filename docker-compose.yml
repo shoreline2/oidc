@@ -12,8 +12,9 @@ services:
     volumes:
       - ./:/app
     secrets:
-      - certificate_pem
       - private_pem
+    environment:
+      PRIVATE_KEY_PATH: "/run/secrets/private_pem"
 secrets:
   private_pem:
     file: ./pki/private.pem
