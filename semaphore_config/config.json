@@ -1,0 +1,28 @@
+{
+  "sqlite": {
+    "host": "semaphore"
+  },
+  "dialect": "sqlite",
+  "cookie_hash": "yCqSPGz6b88csm0oYWGN/9JTZLB4WcAbebY+ZMJ/+Sg=",
+  "cookie_encryption": "/RjA8/DcqdTfiwJFENg4LSU2fyJRZUVWSVDqxp854cY=",
+  "password_login_disable": true,
+  "non_admin_can_create_project": true,
+  "oidc_providers": {
+    "gitlab": {
+      "display_name": "Sign in with PKI",
+      "client_id": "client_id",
+      "client_secret": "client_secret",
+      "redirect_url": "http://localhost:3000/api/auth/oidc/gitlab/redirect",
+      "username_claim": "sub",
+      "email_claim": "email",
+      "name_claim": "name",
+      "endpoint": {
+        "auth": "http://localhost:4000/oidc/auth",
+        "token": "http://oidc:4000/oidc/token",
+        "userinfo": "http://oidc:4000/oidc/me",
+        "jwks": "http://oidc:4000/oidc/jwks",
+        "issuer": "http://localhost:4000"
+      }
+    }
+  }
+}

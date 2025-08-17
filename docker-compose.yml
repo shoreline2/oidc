@@ -1,0 +1,19 @@
+services:
+  semaphore:
+    ports:
+      - 3000:3000
+    image: semaphoreui/semaphore
+    volumes:
+      - ./semaphore_config:/etc/semaphore
+  oidc:
+    build: .
+    ports:
+      - 4000:4000
+    volumes:
+      - ./:/app
+    secrets:
+      - certificate_pem
+      - private_pem
+secrets:
+  private_pem:
+    file: ./pki/private.pem
